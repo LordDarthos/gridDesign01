@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        :root {
+            --main-color: #065f63;
+            --secondary-color: #facf62;
+            --viewport-width: 1440;
+            --mobile-viewport-width: 375;
+        }
+
+        h1 {
+            font-size: calc(64 / var(--viewport-width) * 100vw);
+        }
+
+        h2 {
+            font-size: calc(24 / var(--viewport-width) * 100vw);
+            margin: 0;
+        }
+
+        p {
+            font-size: calc(16 / var(--viewport-width) * 100vw);
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: sans-serif;
+            scroll-behavior: smooth;
+            font-size: calc(112.5% + 0.25vw)
+        }
+
+        body {
+            background-color: black;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: inherit;
+        }
+
+        .container {
+            background-color: white;
+            margin: 0 auto;
+            display: grid;
+            /* grid-gap: 20px; */
+            /* grid-column-gap: 20px; */
+            /* grid-template-columns: minmax(100px, 809px) minmax(100px, 484px); */
+            grid-template-columns: calc(834 / var(--viewport-width) * 100vw) calc(606 / var(--viewport-width) * 100vw);
+            grid-template-rows: minmax(calc(512 / var(--viewport-width) * 100vw),auto) calc(512 / var(--viewport-width) * 100vw);
+            /* grid-template-columns: 100%;
+            grid-template-rows: 33% 33% 33%; */
+
+        }
+
+        /* .item {
+            
+            overflow: hidden;
+        } */
+
+        .item01 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            /* grid-column: 1/2;
+            grid-row: 1/2; */
+        }
+
+        .item02 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            /* grid-column: 1/2;
+            grid-row: 3/4; */
+            background-image: url("aaaa.jpg");
+            /* background-attachment: fixed; */
+            background-size: cover;
+            background-color: #616999;
+            height: auto;
+        }
+
+        .item03 {
+            grid-column: 2/3;
+            grid-row: 1/3;
+            /* grid-column: 1/2;
+            grid-row: 2/3; */
+            position: relative;
+        }
+
+        /* right content */
+
+        .inner-item03 {
+            /* display: flex; */
+            height: 100%;
+            /* position: absolute;
+            top: 0;
+            bottom: 0; */
+            width: calc(450 / var(--viewport-width) * 100vw);
+            background-color: #065f63;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-form-input {
+            margin: 0 auto;
+            display: block;
+            width: calc(280 / var(--viewport-width) * 100vw);
+            height: calc(60 / var(--viewport-width) * 100vw);
+            margin-bottom: calc(20 / var(--viewport-width) * 100vw);
+            font-size: calc(16 / var(--viewport-width) * 100vw);
+            padding: calc(15 / var(--viewport-width) * 100vw);
+            border-radius: 4px;
+            border: none;
+        }
+
+        .contact-form-button {
+            margin: 0 auto;
+            display: block;
+            width: calc(280 / var(--viewport-width) * 100vw);
+            height: calc(60 / var(--viewport-width) * 100vw);
+            font-size: calc(16 / var(--viewport-width) * 100vw);
+            margin-bottom: calc(15 / var(--viewport-width) * 100vw);
+            border-radius: 4px;
+            border: none;
+            background-color: #facf62;
+        }
+
+
+        .contact-form input:nth-child(6){
+            margin-bottom: 31px;
+        }
+
+
+        .contact-form-title {
+            margin-top: calc(248 / var(--viewport-width) * 100vw);
+            min-height: calc(64 / var(--viewport-width) * 100vw);
+            width: calc(248 / var(--viewport-width) * 100vw);
+            text-align: center;
+            color: #ffffff; 
+        }
+
+        .contact-form-subtitle {
+            margin-top: calc(16 / var(--viewport-width) * 100vw);
+            margin-bottom: calc(35 / var(--viewport-width) * 100vw);
+            min-height: calc(22 / var(--viewport-width) * 100vw);
+            width: calc(328 / var(--viewport-width) * 100vw);
+            text-align: center;
+            color: #ffffff; 
+        }
+
+        .imgcontainer {
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            min-height: 1024px;
+            max-height: 2000px;
+        }
+
+        .Ellipse-2 {
+            width: calc(177 / var(--viewport-width) * 100vw);
+            position: absolute;
+            bottom: 0px;
+            left: calc(370 / var(--viewport-width) * 100vw);
+        }
+
+
+        /* left-top content */
+
+        .logo-name, .editable-title, .editable-subtitle {
+            margin: 0;
+        }
+
+        .logo-name {
+            margin-top: calc(54 / var(--viewport-width) * 100vw);
+            margin-left: calc(240 / var(--viewport-width) * 100vw);
+            width: calc(111 / var(--viewport-width) * 100vw);
+        }
+
+        .editable-title {
+            margin-top: calc(102 / var(--viewport-width) * 100vw);
+            margin-left: calc(240 / var(--viewport-width) * 100vw);
+            width: calc(554 / var(--viewport-width) * 100vw);
+        }
+
+        .editable-subtitle {
+            margin-top: calc(32 / var(--viewport-width) * 100vw);
+            margin-bottom:  calc(102 / var(--viewport-width) * 100vw);
+            margin-left: calc(240 / var(--viewport-width) * 100vw);
+            width: calc(473 / var(--viewport-width) * 100vw);
+        }
+
+        @media (max-width: 768px) {
+            
+            h1 {
+                font-size: calc(34 / var(--mobile-viewport-width) * 100vw);
+            }
+
+            h2 {
+                font-size: calc(20 / var(--mobile-viewport-width) * 100vw);
+                margin: 0;
+            }
+
+            p {
+                font-size: calc(16 / var(--mobile-viewport-width) * 100vw);
+            }
+
+            .container {
+                grid-template-columns: 100%;
+                grid-template-rows: minmax(calc(343 / var(--mobile-viewport-width) * 100vw),auto) minmax(calc(508 / var(--mobile-viewport-width) * 100vw),auto) calc(173 / var(--mobile-viewport-width) * 100vw);
+            }
+
+            .item01 {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .item02 {
+                grid-column: 1/2;
+                grid-row: 3/4;
+                min-height: calc(173 / var(--mobile-viewport-width) * 100vw);
+            }
+
+            .item03 {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                
+            }
+
+            /* top-content */
+
+            .logo-name, .editable-title, .editable-subtitle {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .logo-name {
+                margin-top: calc(41 / var(--viewport-width) * 100vw);
+                width: calc(111 / var(--mobile-viewport-width) * 100vw);
+                
+            }
+
+            .editable-title {
+                margin-top: calc(24 / var(--mobile-viewport-width) * 100vw);
+                width: calc(343 / var(--mobile-viewport-width) * 100vw);
+            }
+
+            .editable-subtitle {
+                margin-top: calc(24 / var(--mobile-viewport-width) * 100vw);
+                margin-bottom:  calc(28 / var(--mobile-viewport-width) * 100vw);
+                width: calc(343 / var(--mobile-viewport-width) * 100vw);
+            }
+
+            /* mid-content */
+
+            .inner-item03 {
+                width: 100%;
+            }
+
+            .contact-form-input {
+                margin: 0 auto;
+                display: block;
+                width: calc(250 / var(--mobile-viewport-width) * 100vw);
+                height: calc(60 / var(--mobile-viewport-width) * 100vw);
+                margin-bottom: calc(16 / var(--mobile-viewport-width) * 100vw);
+                font-size: calc(16 / var(--mobile-viewport-width) * 100vw);
+                padding: calc(15 / var(--mobile-viewport-width) * 100vw);
+                border-radius: 4px;
+                border: none;
+            }
+        
+            .contact-form-button {
+                margin: 0 auto;
+                display: block;
+                width: calc(250 / var(--mobile-viewport-width) * 100vw);
+                height: calc(60 / var(--mobile-viewport-width) * 100vw);
+                font-size: calc(14 / var(--mobile-viewport-width) * 100vw);
+                margin-bottom: calc(48 / var(--mobile-viewport-width) * 100vw);
+                border-radius: 4px;
+                border: none;
+                background-color: #facf62;
+            }
+        
+        
+            .contact-form input:nth-child(6){
+                margin-bottom: 31px;
+            }
+        
+        
+            .contact-form-title {
+                margin-top: calc(18 / var(--mobile-viewport-width) * 100vw);
+                min-height: calc(32 / var(--mobile-viewport-width) * 100vw);
+                width: calc(310 / var(--mobile-viewport-width) * 100vw);
+            }
+        
+            .contact-form-subtitle {
+                margin-top: calc(8 / var(--mobile-viewport-width) * 100vw);
+                margin-bottom: calc(16 / var(--mobile-viewport-width) * 100vw);
+                min-height: calc(22 / var(--mobile-viewport-width) * 100vw);
+                width: calc(309 / var(--mobile-viewport-width) * 100vw);
+            }
+        
+            .Ellipse-2 {
+                display: none;
+                visibility: hidden;
+            }
+        }
+        
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item01">
+            <p class="logo-name" contentEditable="true">Your Logo</p>
+
+            <h1 class="editable-title" contentEditable="true">Find your dream house and turn it into your new home</h1>
+
+            <h2 class="editable-subtitle" contentEditable="true">With thousands of options in the market, you need someone on your side to dins THE ONE</h2>
+        </div>
+        <div class="item item02">
+            
+        </div>
+        <div class="item item03">
+            <div class="inner-item03">
+                <form class="contact-form"> 
+                    <h2 class="contact-form-title" contentEditable="true">Schedule and Appointment</h2>
+    
+                    <p class="contact-form-subtitle" contentEditable="true">Select the time options</p>
+    
+                    <input class="contact-form-input" type="text" name="fn" placeholder="First Name">
+    
+                    <input class="contact-form-input" type="text" name="ln" placeholder="Last Name">
+    
+                    <input class="contact-form-input" type="text" name="email" placeholder="Email">
+    
+                    <input class="contact-form-input" type="text" name="phone" placeholder="Phone">
+    
+                    <input class="contact-form-button" type="submit" value="Schedule and Appointment">
+                </form>
+                <img src="Ellipse 2.svg" class="Ellipse-2">
+            </div>
+            
+            
+        </div>
+        
+    </div>
+</body>
+</html>
